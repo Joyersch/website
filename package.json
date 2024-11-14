@@ -1,0 +1,36 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "If this ends up somewhere other than the repository, please message me to get it removed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js && webpack --mode production",
+    "serve": "http-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joyersch/website.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Joyersch/website/issues"
+  },
+  "homepage": "https://github.com/Joyersch/website#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "marked": "^15.0.0",
+    "nunjucks": "^3.2.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
