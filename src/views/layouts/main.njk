@@ -1,3 +1,13 @@
-<header>
-    <h1>Hallo</h1>
-</header>
+<!DOCTYPE html>
+<html lang="de">
+    <script src="/js/index.js"></script>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        {% include 'partials/footer.njk' %}
+    </body>
+</html>

@@ -7,10 +7,8 @@ const nunjucks = require('nunjucks');
 const paths = {
     output: {
         root: path.join(__dirname, 'public'),
-        projects: path.join(__dirname, 'public/projects')
     },
     input: {
-        projects: path.join(__dirname, 'src/projects'),
         statics: path.join(__dirname, 'src/static'),
         views: path.join(__dirname, 'src/views'),
     },
@@ -41,31 +39,6 @@ const renderAsHtml = (content, title) => `
 
 if (!fs.pathExistsSync(paths.output.root)) {
     fs.mkdirSync(paths.output.root);
-}
-
-if (!fs.pathExistsSync(paths.output.projects)) {
-    fs.mkdirSync(paths.output.projects);
-}
-else {
-    fs.rmSync(paths.output.projects, { recursive: true, force: true });
-    fs.mkdirSync(paths.output.projects);
-}
-
-fs.ensureDirSync(paths.input.projects);
-const projects = fs.readdirSync(paths.input.projects);
-
-for (const file of projects) {
-    if (path.extname(file) !== '.md') {
-        continue;
-    }
-
-    const markdownPath = path.join(paths.input.projects, file);
-    const markdownContent = fs.readFileSync(markdownPath, 'utf-8');
-
-    const htmlContent = marked.marked(markdownContent);
-    const finalHtml = renderAsHtml(htmlContent, path.basename(file, '.md'));
-    const outputFileName = path.join(paths.output.projects, `${path.basename(file, '.md')}.html`);
-    fs.writeFileSync(outputFileName, finalHtml);
 }
 
 fs.ensureDirSync(paths.input.statics);
