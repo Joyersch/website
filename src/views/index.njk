@@ -1,4 +1,10 @@
 {% extends 'layouts/main.njk' %}
 {% block content %}
-    {% include 'partials/about.njk' %}
-{% endblock %}
+    <div class="d-flex flex-row">
+        {% include 'partials/sidebar.njk' %}
+        <div class="content">
+            {% include 'partials/about.njk' %}
+            {% include 'partials/footer.njk' %}
+        </div>
+        <div>
+        {% endblock %}
