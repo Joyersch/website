@@ -1,40 +1,45 @@
 <script>
-    import AboutIcon from "@material-design-icons/svg/filled/account_circle.svg";
-    import ProjectsIcon from "@material-design-icons/svg/filled/folder.svg";
-    import ArchiveIcon from "@material-design-icons/svg/filled/archive.svg";
     import { menu } from "../stores.js";
+    let menuState = "about";
     function changeMenu(newMenu) {
+        menuState = newMenu;
         menu.set(newMenu);
     }
 </script>
 
 <header>
-    <div class="flex justify-left">
-        <h1 class="text-4xl font-bold text-gray-800 mt-4">Joyersch</h1>
+    <div class="flex flex-row justify-between">
+        <div class="filex flex-col">
+            <h1 class="text-4xl ml-4 font-boldmt-4">Hello :3</h1>
+            <h2 class="text-1xl ml-4">How did you get here?</h2>
+        </div>
     </div>
-    <div>
-        <div class="flex space-x-4">
+    <div class="mt-1">
+        <div class="flex justify-center space-x-4">
             <button
-                class="flex items-center gap-2 p-2 cursor-pointer hover:text-blue-500 transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition"
+                class:text-neya_main={menuState === "about"}
+                class:text-neya_second={menuState !== "about"}
                 on:click={() => changeMenu("about")}
             >
-                <img src={AboutIcon} alt="About" class="w-6 h-6" />
                 <span>About</span>
             </button>
 
             <button
-                class="flex items-center gap-2 p-2 cursor-pointer hover:text-blue-500 transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition"
                 on:click={() => changeMenu("projects")}
+                class:text-neya_main={menuState === "projects"}
+                class:text-neya_second={menuState !== "projects"}
             >
-                <img src={ProjectsIcon} alt="Projects" class="w-6 h-6" />
                 <span>Projects</span>
             </button>
 
             <button
-                class="flex items-center gap-2 p-2 cursor-pointer hover:text-blue-500 transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition"
                 on:click={() => changeMenu("archive")}
+                class:text-neya_main={menuState === "archive"}
+                class:text-neya_second={menuState !== "archive"}
             >
-                <img src={ArchiveIcon} alt="Archive" class="w-6 h-6" />
                 <span>Archive</span>
             </button>
         </div>

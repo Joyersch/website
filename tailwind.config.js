@@ -6,6 +6,10 @@ export default {
       fontFamily: {
         dm_mono: ['DM Mono', 'monospace'],
       },
+      colors: {
+        neya_main: '#f8dbfc',
+        neya_second: '#cca3cb',
+      }
     },
   },
   plugins: [],
