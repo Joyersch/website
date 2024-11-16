@@ -29,25 +29,6 @@ nunjucks.configure(paths.input.views, {
     autoescape: true
 });
 
-const renderAsHtml = (content, title) => `
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title}</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-    <div class="container">
-        <main class="content">
-            ${content}
-        </main>
-    </div>
-</body>
-</html>
-`;
-
 fs.ensureDirSync(paths.output.root);
 fs.ensureDirSync(paths.output.css);
 fs.ensureDirSync(paths.output.js);
