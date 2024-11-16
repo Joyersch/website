@@ -1,12 +1,10 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "If this ends up somewhere other than the repository, please message me to get it removed.",
-  "main": "index.js",
+  "description": "The short anwser is 'yes'. I wanted the created result to match what I had prior which is why I build by own build script instead of using an existing framework.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
-    "serve": "http-server public"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,12 +15,5 @@
   "bugs": {
     "url": "https://github.com/Joyersch/website/issues"
   },
-  "homepage": "https://github.com/Joyersch/website#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "fs-extra": "^11.2.0",
-    "nunjucks": "^3.2.4",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/Joyersch/website#readme"
 }

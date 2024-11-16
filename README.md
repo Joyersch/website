@@ -1,1 +1,0 @@
-The short anwser is 'yes'. I wanted the created result to match what I had prior which is why I build by own build script instead of using an existing framework.
