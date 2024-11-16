@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js && webpack --mode production",
+    "build": "node build.js",
     "serve": "http-server public"
   },
   "repository": {
@@ -20,17 +20,9 @@
   "homepage": "https://github.com/Joyersch/website#readme",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "fs": "^0.0.1-security",
+    "bootstrap-icons": "^1.11.3",
     "fs-extra": "^11.2.0",
-    "marked": "^15.0.0",
     "nunjucks": "^3.2.4",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "css-loader": "^7.1.2",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
   }
 }
