@@ -8,16 +8,18 @@
 </script>
 
 <header>
-    <div class="flex flex-row justify-between">
-        <div class="filex flex-col">
-            <h1 class="text-4xl ml-4 font-boldmt-4">Hello :3</h1>
-            <h2 class="text-1xl ml-4">How did you get here?</h2>
+    <div class="flex flex-row justify-center">
+        <div class="flex flex-col">
+            <h1 class="text-4xl ml-4 font-boldmt-4">Joyersch</h1>
+            <h2 class="text-1xl ml-4 text-neya_second">
+                In need for some headpats
+            </h2>
         </div>
     </div>
     <div class="mt-1">
         <div class="flex justify-center space-x-4">
             <button
-                class="flex flex-col items-center p-2 cursor-pointer transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition hover:text-neya_main"
                 class:text-neya_main={menuState === "about"}
                 class:text-neya_second={menuState !== "about"}
                 on:click={() => changeMenu("about")}
@@ -26,7 +28,7 @@
             </button>
 
             <button
-                class="flex flex-col items-center p-2 cursor-pointer transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition hover:text-neya_main"
                 on:click={() => changeMenu("projects")}
                 class:text-neya_main={menuState === "projects"}
                 class:text-neya_second={menuState !== "projects"}
@@ -35,7 +37,7 @@
             </button>
 
             <button
-                class="flex flex-col items-center p-2 cursor-pointer transition"
+                class="flex flex-col items-center p-2 cursor-pointer transition hover:text-neya_main"
                 on:click={() => changeMenu("archive")}
                 class:text-neya_main={menuState === "archive"}
                 class:text-neya_second={menuState !== "archive"}

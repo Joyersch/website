@@ -9,6 +9,8 @@ export default {
       colors: {
         neya_main: '#f8dbfc',
         neya_second: '#cca3cb',
+        neya_eyes: '#a100ff',
+        neya_eyes_darkened: '#43006a'
       }
     },
   },

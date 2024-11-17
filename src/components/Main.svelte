@@ -10,7 +10,8 @@
     });
 </script>
 
-<main>
+<hr class="border-t-4 border-neya_eyes_darkened my-4" />
+<main class="mt-3">
     <div class="container mx-auto">
         {#if currentMenu === "projects"}
             <Projects />
