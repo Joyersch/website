@@ -57,6 +57,11 @@
                     color: "black",
                     text: "postgresql",
                 },
+                {
+                    bgcolor: "#e8df35",
+                    color: "black",
+                    text: "JS",
+                },
             ],
         },
     ];
