@@ -76,7 +76,7 @@
                 },
                 {
                     bgcolor: "#e73c00",
-                    color: "black",
+                    color: "white",
                     text: "MonoGame",
                 },
             ],
