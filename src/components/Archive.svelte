@@ -44,7 +44,7 @@
                 },
                 {
                     bgcolor: "#2b45c6",
-                    color: "black",
+                    color: "white",
                     text: "Python",
                 },
                 {
