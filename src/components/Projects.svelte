@@ -16,6 +16,13 @@
                     href: " https://docs.joyersch.de/books/sadet-CYv",
                 },
             ],
+            technologies: [
+                {
+                    bgcolor: "#742099",
+                    color: "white",
+                    text: "C#",
+                },
+            ],
         },
         {
             name: "This website",
@@ -26,6 +33,23 @@
                 {
                     text: "Github",
                     href: "https://github.com/Joyersch/website",
+                },
+            ],
+            technologies: [
+                {
+                    bgcolor: "#e8df35",
+                    color: "black",
+                    text: "JS",
+                },
+                {
+                    bgcolor: "#74bc2d",
+                    color: "black",
+                    text: "Node",
+                },
+                {
+                    bgcolor: "#fc8c37",
+                    color: "black",
+                    text: "Svelte",
                 },
             ],
         },
@@ -44,15 +68,24 @@
                     href: "https://joyersch.itch.io/nonamebuttongame",
                 },
             ],
+            technologies: [
+                {
+                    bgcolor: "#742099",
+                    color: "white",
+                    text: "C#",
+                },
+                {
+                    bgcolor: "#e73c00",
+                    color: "black",
+                    text: "MonoGame",
+                },
+            ],
         },
         {
             name: "steam achievement dashboard",
             description:
                 "A simplistic dashboard for manage completing steam achievements. ",
-            img: [
-                "steam-achievement-dashboard_example.png",
-                "steam-achievement-dashboard_example2.png",
-            ],
+            img: ["sad0.png", "sad1.png", "sad2.png"],
             links: [
                 {
                     text: "Github",
@@ -61,6 +94,28 @@
                 {
                     text: "Live",
                     href: "https://sad.joyersch.de/stats/Joy",
+                },
+            ],
+            technologies: [
+                {
+                    bgcolor: "#7f71ce",
+                    color: "black",
+                    text: "php",
+                },
+                {
+                    bgcolor: "#e8df35",
+                    color: "black",
+                    text: "JS",
+                },
+                {
+                    bgcolor: "#c62b2b",
+                    color: "black",
+                    text: "Laravel",
+                },
+                {
+                    bgcolor: "#fc8c37",
+                    color: "black",
+                    text: "Svelte",
                 },
             ],
         },

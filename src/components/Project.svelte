@@ -11,6 +11,18 @@
         </div>
     {/each}
     <div class="flex flex-start mt-2">
+        {#each project.technologies as technologies}
+            <div
+                class="ml-1 mr-1 rounded-xl p-1"
+                style="background-color: {technologies.bgcolor}; color: {technologies.color}"
+            >
+                <p>
+                    {technologies.text}
+                </p>
+            </div>
+        {/each}
+    </div>
+    <div class="flex flex-start mt-2">
         {#each project.links as link}
             <div class="ml-1 mr-1">
                 <a class="hover:text-neya_second" href={link.href}>
