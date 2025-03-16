@@ -10,9 +10,9 @@
 <header>
     <div class="flex flex-row justify-center">
         <div class="flex flex-col">
-            <h1 class="text-4xl ml-4 font-boldmt-4">Joyersch</h1>
+            <h1 class="text-4xl ml-4 font-boldmt-4 pl-24">Joyersch</h1>
             <h2 class="text-1xl ml-4 text-neya_second">
-                In need for some headpats
+                Loves solving problems, hates beeing one
             </h2>
         </div>
     </div>
