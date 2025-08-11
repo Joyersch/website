@@ -1,5 +1,4 @@
 <div class="ml-3 mr-3">
-    <p class="text-xl">Me</p>
     <div class="mt-3 mb-8">
         <p>Hi, my name is joy and i do coding stuff.</p>
         <p>
