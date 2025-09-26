@@ -48,7 +48,7 @@
         </div>
 
         <div>
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 pr-5">
             {name}
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">{pronouns}</p>
