@@ -3,11 +3,9 @@
   import Projects from "./lib/Projects.svelte";
 </script>
 
-<div class="flex flex-1 w-[100vw]">
-  <div class="flex flex-1 flex-col items-center">
-    <div class="flex flex-1 max-w-[600px] flex-col">
-      <About />
-      <Projects />
-    </div>
+<div class="flex flex-1 flex-col items-center">
+  <div class="flex flex-1 max-w-[600px] flex-col">
+    <About />
+    <Projects />
   </div>
 </div>
