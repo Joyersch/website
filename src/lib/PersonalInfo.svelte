@@ -19,7 +19,7 @@
         },
     ];
 
-    const name = "joy schnittker";
+    const name = "joy";
     const pronouns = "she/her";
     const birthDate = "2001-08-30";
     const devSince = "2023-08-09";
