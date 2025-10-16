@@ -5,81 +5,61 @@
 
   const projects = [
     {
-      title: "NoNameButtonGame",
-      description:
-        "A game about pressing a button. Or rather not beeing able to...",
-      headerGradient: "from-red-400 to-gray-500",
-      techTags: [
-        { name: "Monogame", color: "bg-orange-100 text-orange-800" },
-        { name: "C#", color: "bg-sky-500 text-sky-800" },
-        { name: "Dotnet", color: "bg-violet-600 text-violet-900" },
-      ],
+      title: "nonamebuttongame",
+      techTags: [{ name: "monogame" }, { name: "c#" }, { name: "dotnet" }],
       links: [
         {
           href: "https://github.com/Joyersch/NoNameButtonGame",
-          label: "GitHub",
-          Icon: Github,
+          label: "github",
         },
         {
-          href: "https://lumo-chatbot.demo.proton.me",
-          label: "Itch.IO",
-          Icon: Gamepad2,
+          href: "https://joyersch.itch.io/",
+          label: "itch.io",
         },
       ],
     },
     {
       title: "sadet",
-      description:
-        "CLI tool to extract achievement data from steam and do some data analysis",
-      headerGradient: "from-purple-300 to-blue-500",
-      techTags: [
-        { name: "C#", color: "bg-sky-500 text-sky-800" },
-        { name: "Dotnet", color: "bg-violet-600 text-violet-900" },
-      ],
+      techTags: [{ name: "c#" }, { name: "dotnet" }],
       links: [
         {
           href: "https://github.com/Joyersch/sadet",
-          label: "GitHub",
-          Icon: Github,
+          label: "github",
         },
         {
           href: "https://docs.joyersch.de/books/sadet-CYv",
-          label: "Docs",
-          Icon: Book,
+          label: "itch.io",
         },
       ],
     },
     {
-      title: "Sad (Steam achievement Dashboard)",
-      description: "Webtool which will track your achievemnt states for you",
-      headerGradient: "from-green-500 to-blue-500",
+      title: "sad",
       techTags: [
-        { name: "php", color: "bg-purple-200 text-purple-800" },
-        { name: "laravel", color: "bg-red-600 text-red-950" },
-        { name: "js", color: "bg-yellow-400 text-yellow-900" },
-        { name: "svelte", color: "bg-orange-500 text-orange-900" },
+        { name: "php" },
+        { name: "laravel" },
+        { name: "js" },
+        { name: "svelte" },
       ],
       links: [
         {
           href: "https://github.com/Joyersch/steam-achievement-dashboard",
-          label: "GitHub",
-          Icon: Github,
+          label: "github",
         },
         {
           href: "https://sad.joyersch.de/",
-          label: "Live",
-          Icon: ExternalLink,
+          label: "live",
         },
       ],
     },
   ];
 </script>
 
-{#each projects as project}
-  <Project
-    title={project.title}
-    description={project.description}
-    headerGradient={project.headerGradient}
-    techTags={project.techTags}
-    links={project.links} />
-{/each}
+<div class="flex flex-row pt-1 gap-2 flex-wrap">
+  {#each projects as project}
+    <Project
+      title={project.title}
+      techTags={project.techTags}
+      links={project.links}
+    />
+  {/each}
+</div>

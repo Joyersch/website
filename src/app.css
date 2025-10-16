@@ -2,7 +2,7 @@
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/catppuccin';
+@import '@fontsource/fusion-pixel-10px-proportional-kr';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
@@ -13,12 +13,60 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ce75c4;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --pink-hover: #bc8a97;
+  --pink-light: #e6b3c2;
+  --pink-dark: #c79aa8;
+  --pink-lighterlight: #e3bbc8;
+  --pink-darkerlight: #e2b8c5;
+  --pink-darkerdark: #b18392;
+
+}
+
+.colored {
+  background-color: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.colored strong {
+  color: var(--pink-darkerdark);
+}
+
+.colored-text {
+  color: var(--pink-dark);
+}
+
+.colored a :hover {
+  color: var(--pink-hover);
+}
+
+.styled {
+  font-family: 'Fusion Pixel 10px Proportional KR', sans-serif;
+}
+
+.styled-border {
+  border: 0.1rem dotted var(--pink-hover);
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+}
+
+.styled-card {
+  background-color: var(--pink-lighterlight);
+}
+
+.styled-border2 {
+  border: 0.2rem double var(--pink-dark);
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+}
+
+.styled-card2 {
+  background-color: var(--pink-darkerlight);
 }
 
 a {
@@ -26,6 +74,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -48,8 +97,8 @@ h1 {
 }
 
 .custom-card {
-    border: 1px solid rgba(var(--tw-border-color), 0.1);
-  }
+  border: 1px solid rgba(var(--tw-border-color), 0.1);
+}
 
 #app {
   text-align: center;
@@ -66,9 +115,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -79,9 +130,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
