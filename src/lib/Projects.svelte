@@ -28,7 +28,7 @@
         },
         {
           href: "https://docs.joyersch.de/books/sadet-CYv",
-          label: "itch.io",
+          label: "docs",
         },
       ],
     },
