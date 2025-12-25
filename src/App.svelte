@@ -4,9 +4,11 @@
 </script>
 
 <div class="flex flex-1 flex-col items-center p-1">
-  <div class="flex flex-1 flex-col items-start styled-border styled-card">
+  <div class="flex flex-1 flex-col items-start">
+    <!-- svelte-ignore a11y_missing_attribute -->
+    <img src="fish.png" />
     <PersonalInfo />
-    <span class="styled colored-text"><strong>projects:</strong></span>
+    <span class="styled projects"><strong>projects:</strong></span>
     <div>
       <Projects />
     </div>
