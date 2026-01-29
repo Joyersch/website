@@ -8,9 +8,11 @@
     <!-- svelte-ignore a11y_missing_attribute -->
     <img src="fish.png" />
     <PersonalInfo />
+    <!--
     <span class="styled projects"><strong>projects:</strong></span>
     <div>
       <Projects />
     </div>
+    -->
   </div>
 </div>
