@@ -3,14 +3,191 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/fish.ico" />
+  <link rel="icon" type="image/svg+xml" href="./fish.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>(Joy)ersch</title>
 </head>
 
 <body class="background">
-  <div class="w-[100%] h-[100%]" id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+  <div id="app" style="width:100%; height: 100%">
+    <div style="display:flex; flex: 1; flex-direction: column; align-items: center; padding: 1;">
+      <div style="display:flex; flex: 1; flex-direction: column; align-items: flex-start;">
+        <img src="./fish.png" />
+        <div>
+          <div style="display:flex; flex-direction: column; align-items: flex-start;">
+            <span class="styled colored">
+              <span class=" name"> <strong>name:</strong></span>
+              <span id="nameDisplay"></span> (<span class="styled pronouns" id="pronounsDisplay">
+              </span>)
+            </span>
+            <span class="styled colored" id="ageDisplay" style="">
+              <span class="age"><strong>age:</strong></span>
+            </span>
+            <span class="styled colored">
+              <span class="develop"><strong>developer for:</strong></span>
+              <span id="devSinceYearDisplay"></span> years <span id="devSinceMonthDisplay"></span> months
+            </span>
+          </div>
+          <div style="display: flex; gap: 8px">
+            <span class="styled links"><strong>links: </strong></span>
+            <a href="https://github.com/Joyersch" target="_blank" rel="noopener noreferrer" class="styled link"
+              aria-label="Github" title="github">
+              <span>github</span>
+            </a>
+            <a href="https://joyersch.itch.io/" target="_blank" rel="noopener noreferrer" class="styled link"
+              aria-label="Itch.io" title="itch.io">
+              <span>itch.io</span>
+            </a>
+            <a href="https://www.linkedin.com/in/joy-7ejnma/" target="_blank" rel="noopener noreferrer"
+              class="styled link" aria-label="linkedin" title="LinkedIn">
+              <span>linkedin</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="./js/moment.js"></script>
+<script>
+  function getYears(date) {
+    const now = moment();
+    const than = moment(date);
+    const y = now.diff(than, 'years', false);
+    const m = now.diff(than, 'months', false) - (y * 12);
+    return y;
+  }
+
+  function getMonths(date) {
+    const now = moment();
+    const than = moment(date);
+    const y = now.diff(than, 'years', false);
+    const m = now.diff(than, 'months', false) - (y * 12);
+    return m;
+  }
+
+  const name = "joy";
+  const pronouns = "she/her";
+  const birthDate = "2001-08-30";
+  const devSince = "2023-08-09";
+
+  const ageDisplay = document.getElementById("ageDisplay");
+  const pronounsDisplay = document.getElementById("pronounsDisplay");
+  const nameDisplay = document.getElementById("nameDisplay");
+  const devSinceYearDisplay = document.getElementById("devSinceYearDisplay");
+  const devSinceMonthDisplay = document.getElementById("devSinceMonthDisplay");
+
+  ageDisplay.innerHTML = ageDisplay.innerHTML + getYears(birthDate) + 'y/o';
+  pronounsDisplay.innerHTML = pronouns;
+  nameDisplay.innerHTML = name;
+  devSinceYearDisplay.innerHTML = getYears(devSince);
+  devSinceMonthDisplay.innerHTML = getMonths(devSince);
+  getYears
+</script>
+<style>
+  :root {
+    --background: #181a1b;
+    --default: #afafaf;
+    --link: #549edf;
+    --border: #777777;
+    --name: #e67738;
+    --pronouns: #d64eee;
+    --age: #ffc106;
+    --develop: #c5ef1c;
+    --links: #38e2c9;
+    --projects: #aa34ea;
+    --project-index: #f96868;
+
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: 'Fusion Pixel 10px Proportional KR';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(./font/fusion-pixel-10px-proportional-kr-latin-400-normal.woff2) format('woff2'), url(./font/fusion-pixel-10px-proportional-kr-latin-400-normal.woff) format('woff');
+  }
+
+  .background {
+    background-color: var(--background);
+  }
+
+  .border {
+    border: solid 0.25rem var(--border);
+    color: var(--link);
+  }
+
+  .name {
+    color: var(--name);
+  }
+
+  .pronouns {
+    color: var(--pronouns);
+  }
+
+  .age {
+    color: var(--age);
+  }
+
+  .develop {
+    color: var(--develop);
+  }
+
+  .links {
+    color: var(--links);
+  }
+
+  .projects {
+    color: var(--projects);
+  }
+
+  .link {
+    color: var(--link);
+  }
+
+  .project-index {
+    color: var(--project-index);
+  }
+
+  .list {
+    margin: 0;
+    padding-left: 2rem;
+    list-style-type: decimal;
+    list-style-position: outside;
+    text-align: left;
+  }
+
+  .styled {
+    font-family: 'Fusion Pixel 10px Proportional KR', sans-serif;
+  }
+
+  .colored {
+    color: var(--default);
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+
+  a:hover {
+    color: #535bf2;
+  }
+</style>
 
 </html>
