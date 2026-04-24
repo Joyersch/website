@@ -27,6 +27,10 @@
               <span class="develop"><strong>developer for:</strong></span>
               <span id="devSinceYearDisplay"></span> years <span id="devSinceMonthDisplay"></span> months
             </span>
+            <span class="styled colored">
+              <span class="coding"><strong>coding for:</strong></span>
+              <span id="codingSinceYearDisplay"></span> years <span id="codingSinceMonthDisplay"></span> months
+            </span>
           </div>
           <div style="display: flex; gap: 8px">
             <span class="styled links"><strong>links: </strong></span>
@@ -70,18 +74,23 @@
   const pronouns = "she/her";
   const birthDate = "2001-08-30";
   const devSince = "2023-08-09";
+  const codingSince = "2017-10-01"; // estimation
 
   const ageDisplay = document.getElementById("ageDisplay");
   const pronounsDisplay = document.getElementById("pronounsDisplay");
   const nameDisplay = document.getElementById("nameDisplay");
   const devSinceYearDisplay = document.getElementById("devSinceYearDisplay");
   const devSinceMonthDisplay = document.getElementById("devSinceMonthDisplay");
+  const codingSinceYearDisplay = document.getElementById("codingSinceYearDisplay");
+  const codingSinceMonthDisplay = document.getElementById("codingSinceMonthDisplay");
 
   ageDisplay.innerHTML = ageDisplay.innerHTML + getYears(birthDate) + 'y/o';
   pronounsDisplay.innerHTML = pronouns;
   nameDisplay.innerHTML = name;
   devSinceYearDisplay.innerHTML = getYears(devSince);
   devSinceMonthDisplay.innerHTML = getMonths(devSince);
+  codingSinceYearDisplay.innerHTML = getYears(codingSince);
+  codingSinceMonthDisplay.innerHTML = getMonths(codingSince);
 </script>
 <style>
   :root {
@@ -93,6 +102,7 @@
     --pronouns: #d64eee;
     --age: #ffc106;
     --develop: #c5ef1c;
+    --coding: rgb(28, 239, 112);
     --links: #38e2c9;
     --projects: #aa34ea;
     --project-index: #f96868;
@@ -136,6 +146,10 @@
 
   .develop {
     color: var(--develop);
+  }
+
+  .coding {
+    color: var(--coding);
   }
 
   .links {
